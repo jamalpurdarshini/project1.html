@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar with Background Image</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body{
+        background-color: black;
+    }
+    .background-image {
+      background: url("./home-bg.1.jpg") no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background:black; 
+      color: rgb(248, 242, 242);
+      font-family: Arial, sans-serif;
+      opacity: 0.8;
+    }
+    .nav-start {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-end {
+      font-size: 18px;
+      text-align: right;
+    }
+    .content {
+      text-align: center;
+      color: rgb(239, 235, 235);
+      font-size: 30px;
+    margin-right: -300px;
+    }
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-start,
+      .nav-end {
+        margin: 5px 0;
+      }
+    }
+    .bottom-section {
+      display: flex;
+      justify-content: space-around; 
+      align-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7); 
+    }
+    .box {
+      width: 30%;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.8); 
+      text-align: center;
+      line-height: 100px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 768px) {
+      .bottom-section {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .box {
+        width: 80%;
+      }
+    }
+    .sd {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      transform: translateY(10px);
+    }
+    .sd1,
+    .sd2,
+    .sd3 {
+      height: 40vh;
+      width: 20vw;
+      color: #f5efef;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .sd1 {
+      background-color: rgb(199, 113, 8);
+    }
+    .sd2 {
+      background-color: rgb(21, 125, 92);
+    }
+    .sd3 {
+      background-color: rgb(244, 248, 15);
+    }
+    .sd11,
+    .sd21,
+    .sd31 {
+      height: 80px;
+      width: 80px;
+      border: 2px solid white;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    svg {
+      height: 50px;
+      width: 50px;
+    }
+    .image-content-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+      margin: 30px auto;
+      max-width: 1200px;
+      padding: 20px;
+      background-color: #080808;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .image-box {
+      flex: 1;
+      max-width: 50%;
+    }
+    .image-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .content-box {
+      flex: 1;
+      padding: 20px;
+    }
+    .content-box h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #f4efef;
+    }
+    .content-box p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #6f6d6d;
+      margin-bottom: 20px;
+    }
+    .content-box button {
+      background-color: #0078ff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .content-box button:hover {
+      background-color: #0056b3;
+    }
+    .recent-projects {
+    text-align: center; 
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+.mdd {
+    font-size: 32px;
+    font-weight: bold;
+    color: #f8f3f3;
+    margin-bottom: 10px;
+    margin-left: 775px;
+}
+.mddd {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-left: 600px;
+}
+.pic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 16px; 
+  grid-template-rows: auto auto; 
+  align-items: center; 
+  justify-items: center; 
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  grid-column: span 3; 
+}
+.images1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 16px;
+  grid-column: span 3;
+}
+img {
+  width: 100%;
+  height: auto; 
+  border-radius: 8px;
+}
+.sd6 {
+  grid-column: span 3; 
+  text-align: center; 
+  font-size: 18px;
+  font-weight: bold; 
+  padding: 10px; 
+  background-color: #f0f0f0; 
+  border-radius: 4px; 
+  cursor: pointer;
+  margin-top: 16px; 
+}
+.sd6:hover {
+  background-color: #e0e0e0; 
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: #f6f0f0;
+}
+.footer-section {
+  width: 30%;
+  padding: 10px;
+}
+.footer-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.footer-content .contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.footer-content .contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.contact-text {
+  font-size: 16px;
+  color: #ebe5e5;
+}
+.footer-links {
+  list-style-type: none;
+  padding-left: 0;
+}
+.footer-links li {
+  margin-bottom: 10px;
+}
+.footer-links a {
+  color: #ece3e3;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: #ffcc00;
+}
+.newsletter {
+  display: flex;
+  flex-direction: column;
+}
+.newsletter-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+.newsletter-submit {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-icon:hover {
+  fill: #ffcc00; 
+}
+.newsletter-submit:hover {
+  background-color: #ff9900;
+}
+.sd8{
+  height: 10vh;
+  width: 30vw;
+ display: flex;
+ opacity: 0.3;
+justify-content: space-around;
+margin-left: 880px;
+}
+   .sd81{
+    height:5vh ;
+    width: 3vw;
+    border: 2px solid white;
+    color: #efeaea;
+    padding: 5px;
+   }
+   .sd82{
+    height:5vh ;
+    width: 3vw;
+    border: 2px solid white;
+    color: #efeaea;
+    padding: 5px;
+   }
+   .sd83{
+    height:5vh ;
+    width: 3vw;
+    border: 2px solid white;
+    color: #efeaea;
+    padding: 5px;
+   }
+   .sd84{
+    height:5vh ;
+    width: 3vw;
+    border: 2px solid white;
+    color: #efeaea;
+    padding: 5px;
+   }
+   .sd85{
+    height:5vh ;
+    width: 3vw;
+    border: 2px solid white;
+    color: #efeaea;
+    padding: 5px;
+   }
+   .sd86{
+    height:5vh ;
+    width: 3vw;
+    border: 2px solid white;
+    color: #efeaea;
+    padding: 5px;
+   }
+   .sd79{
+    color: #efeaea;
+   margin-left: 50px;
+   }
+  </style>
+  <body>
+    <div class="background-image">
+      <nav class="navbar">
+        <div class="nav-start">NETEL</div>
+        <div class="nav-end">HOME ABOUT US PORTOFOLIO CONTACT US</div>
+      </nav>
+      <div class="content">
+        <h1>Welcome to <br> Onetel Design Studio</h1>
+      </div>
+    </div>
+    <div class="sd">
+      <div class="sd1">
+        <div class="sd11">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 9C3 6.17157 3 4.75736 3.87868 3.87868C4.75736 3 6.17157 3 9 3H15C17.8284 3 19.2426 3 20.1213 3.87868C21 4.75736 21 6.17157 21 9V14C21 15.8856 21 16.8284 20.4142 17.4142C19.8284 18 18.8856 18 17 18H7C5.11438 18 4.17157 18 3.58579 17.4142C3 16.8284 3 15.8856 3 14V9Z"
+              stroke="#f1f4fe"
+              stroke-width="1.5"
+            ></path>
+            <path
+              d="M22 21H2"
+              stroke="#f1f4fe"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            ></path>
+            <path
+              d="M15 15H9"
+              stroke="#f1f4fe"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </div>
+        <h1>RESPONSIVE</h1>
+        <p>
+          Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit.<br />sed
+          diam nonummy nibh euismod<br />tincidunt ut laoreet.
+        </p>
+      </div>
+      <div class="sd2">
+        <div class="sd21">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 18H12.01M11 6H13M9.2 21H14.8C15.9201 21 16.4802 21 16.908 20.782C17.2843 20.5903 17.5903 20.2843 17.782 19.908C18 19.4802 18 18.9201 18 17.8V6.2C18 5.0799 18 4.51984 17.782 4.09202C17.5903 3.71569 17.2843 3.40973 16.908 3.21799C16.4802 3 15.9201 3 14.8 3H9.2C8.0799 3 7.51984 3 7.09202 3.21799C6.71569 3.40973 6.40973 3.71569 6.21799 4.09202C6 4.51984 6 5.07989 6 6.2V17.8C6 18.9201 6 19.4802 6.21799 19.908C6.40973 20.2843 6.71569 20.5903 7.09202 20.782C7.51984 21 8.07989 21 9.2 21Z"
+              stroke="#fbefef"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <h1>Easy to Use</h1>
+        <p>
+          Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit.<br />sed
+          diam nonummy nibh euismod<br />tincidunt ut laoreet.
+        </p>
+      </div>
+      <div class="sd3">
+        <div class="sd31">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z"
+              fill="#f4f7fb"
+            ></path>
+          </svg>
+        </div>
+        <h1>Quick Support</h1>
+        <p>
+          Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit.<br />sed
+          diam nonummy nibh euismod<br />tincidunt ut laoreet.
+        </p>
+      </div>
+    </div>
+    <div class="image-content-container">
+      <div class="image-box">
+        <img src="./about-img.jpg" alt="Description Image" />
+      </div>
+      <div class="content-box">
+        <h2>Content Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat.
+        </p>
+        <button>Learn More</button>
+      </div>
+    </div>
+    <div class="mdd">Recent Projects</div><br>
+<div class="mddd">Lorem ipsum dolor sit amet,consectetur adipisicing elit.sed diam nonummy nibh<br>euismod tincidunt ut laoreet.Dolore magna aliquam erat volutpat</div><br>
+<div class="pic">
+    <div class="images">
+      <img class="img1" src="./portfolio-img1.jpg">
+      <img class="img2" src="./portfolio-img2.jpg">
+      <img class="img3" src="./portfolio-img3.jpg">
+    </div>
+    <div class="images1">
+      <img class="img4" src="./portfolio-img7.jpg">
+      <img class="img5" src="./portfolio-img5.jpg">
+      <img class="img6" src="./portfolio-img6.jpg">
+      <img class="img7" src="./portfolio-img7.jpg">
+    </div>
+    <div class="sd6">view more</div><br>
+  </div>
+  <div class="footer">
+    <div class="footer-section">
+      <h2 class="footer-heading">Contact Us</h2>
+      <p>onetel is free bootstrap v3.3.3 HTML5 layout from templatemo website.Feel free to use it for your website.</p>
+      <div class="footer-content">
+        <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke="#f6efef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+          <span class="contact-text">010-020-0340</span>
+        </div>
+        <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="#f1f1f3"></path> </g></svg>
+          <span class="contact-text">info@company.com</span>
+        </div>
+        <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M6.15407 7.30116C7.52877 5.59304 9.63674 4.5 12 4.5C12.365 4.5 12.7238 4.52607 13.0748 4.57644L13.7126 5.85192L11.2716 8.2929L8.6466 8.6679L7.36009 9.95441L6.15407 7.30116ZM5.2011 8.82954C4.75126 9.79256 4.5 10.8669 4.5 12C4.5 15.6945 7.17133 18.7651 10.6878 19.3856L11.0989 18.7195L8.8147 15.547L10.3741 13.5256L9.63268 13.1549L6.94027 13.6036L6.41366 11.4972L5.2011 8.82954ZM7.95559 11.4802L8.05962 11.8964L9.86722 11.5951L11.3726 12.3478L14.0824 11.9714L18.9544 14.8135C19.3063 13.9447 19.5 12.995 19.5 12C19.5 8.93729 17.6642 6.30336 15.033 5.13856L15.5377 6.1481L11.9787 9.70711L9.35371 10.0821L7.95559 11.4802ZM18.2539 16.1414C16.9774 18.0652 14.8369 19.366 12.3859 19.4902L12.9011 18.6555L10.6853 15.578L12.0853 13.7632L13.7748 13.5286L18.2539 16.1414ZM12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3Z" fill="#f3f2f8"></path> </g></svg>
+          <span class="contact-text">www.company.com</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-section">
+      <h2 class="footer-heading">Useful Links</h2>
+      <ul class="footer-links">
+        <li><a href="#">HTML5 Templates</a></li>
+        <li><a href="#">CSS3 Tricks</a></li>
+        <li><a href="#">Design Blog</a></li>
+        <li><a href="#">Animations</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h2 class="footer-heading">Newsletter</h2>
+      <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit.sed diam nonummy nibh <br>euismod</p>
+      <div class="newsletter">
+        <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+        <button class="newsletter-submit">Submit</button>
+      </div>
+    </div>
+  </div>
+  <div class="sd79">Copyright @ Company Name</div>
+<div class="sd8">
+    <div class="sd81"><svg fill="#f4ebeb" viewBox="0 0 32 32"height="20"width="20" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"></path></g></svg></div>
+    <div class="sd82"><svg viewBox="0 -2 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>twitter [#154]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -7521.000000)" fill="#fff0f0"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705" id="twitter-[#154]"> </path> </g> </g> </g> </g></svg></div>
+    <div class="sd83"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 15L20 15" stroke="#f9ebeb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M4 9L20 9" stroke="#f9ebeb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <circle cx="12" cy="12" r="9" stroke="#f9ebeb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle> <path d="M12.0004 20.8182L11.2862 21.5181C11.4742 21.7101 11.7317 21.8182 12.0004 21.8182C12.2691 21.8182 12.5265 21.7101 12.7146 21.5181L12.0004 20.8182ZM12.0004 3.18188L12.7146 2.48198C12.5265 2.29005 12.2691 2.18188 12.0004 2.18188C11.7317 2.18188 11.4742 2.29005 11.2861 2.48198L12.0004 3.18188ZM14.6004 12.0001C14.6004 15.1611 13.3373 18.0251 11.2862 20.1183L12.7146 21.5181C15.1173 19.0662 16.6004 15.7053 16.6004 12.0001H14.6004ZM11.2861 3.88178C13.3373 5.97501 14.6004 8.83903 14.6004 12.0001H16.6004C16.6004 8.29478 15.1173 4.93389 12.7146 2.48198L11.2861 3.88178ZM9.40039 12.0001C9.40039 8.83903 10.6634 5.97501 12.7146 3.88178L11.2861 2.48198C8.88347 4.93389 7.40039 8.29478 7.40039 12.0001H9.40039ZM12.7146 20.1183C10.6634 18.0251 9.40039 15.1611 9.40039 12.0001H7.40039C7.40039 15.7053 8.88348 19.0662 11.2862 21.5181L12.7146 20.1183Z" fill="#f9ebeb"></path> </g></svg></div>
+    <div class="sd84"><svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>pinterest [#180]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-220.000000, -7399.000000)" fill="#f8e7e7"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M173.876,7239 C168.399,7239 164,7243.43481 164,7248.95866 C164,7253.05869 166.407,7256.48916 169.893,7258.07936 C169.893,7256.21186 169.88,7256.45286 171.303,7250.38046 C170.521,7248.80236 171.129,7246.19673 172.88,7246.19673 C175.31,7246.19673 173.659,7249.79964 173.378,7251.2174 C173.129,7252.30544 173.959,7253.14238 174.955,7253.14238 C176.864,7253.14238 178.108,7250.71524 178.108,7247.87063 C178.108,7245.69456 176.615,7244.10437 174.042,7244.10437 C169.467,7244.10437 168.307,7249.19966 169.893,7250.79893 C170.292,7251.40294 169.893,7251.43118 169.893,7252.22174 C169.616,7253.05768 167.403,7251.84259 167.403,7248.70757 C167.403,7245.86195 169.727,7242.51518 174.457,7242.51518 C178.191,7242.51518 180.681,7245.27609 180.681,7248.2054 C180.681,7252.13805 178.523,7254.98366 175.37,7254.98366 C174.291,7254.98366 173.295,7254.3978 172.963,7253.72824 C172.36,7256.07371 172.238,7257.26258 171.303,7258.58153 C172.216,7258.83261 173.129,7259 174.125,7259 C179.602,7259 184,7254.56519 184,7249.04235 C183.752,7243.43481 179.353,7239 173.876,7239" id="pinterest-[#180]"> </path> </g> </g> </g> </g></svg></div>
+    <div class="sd85"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 19C1.67157 19 1 18.3284 1 17.5V6.5C1 5.67157 1.67157 5 2.5 5H8C13 5 13 11.5 10 11.5C13 11.5 14 19 8 19H2.5ZM4.5 11C4.22386 11 4 10.7761 4 10.5V7.5C4 7.22386 4.22386 7 4.5 7H7C7 7 9 7 9 9C9 11 7 11 7 11H4.5ZM4.5 13C4.22386 13 4 13.2239 4 13.5V16.5C4 16.7761 4.22386 17 4.5 17H8C8 17 9.5 17 9.5 15C9.5 13 8 13 8 13H4.5Z" fill="#f7f3f3"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M21.499 14.0034C22.3279 14.0034 23.0212 13.3199 22.8522 12.5085C21.6065 6.52886 12.9128 7.08088 13 14.0034C13.0665 19.2762 20.4344 20.9671 22.6038 16.1898C22.9485 15.4308 22.1747 14.9997 21.5372 14.9997C20.9706 14.9997 20.5313 15.5223 20.1693 15.9582C19.1272 17.2132 15.9628 17.1221 15.5449 14.5142C15.5005 14.2375 15.7304 14.0034 16.0106 14.0034H21.499ZM15.8184 11.9997C15.671 11.9997 15.5758 11.8453 15.6545 11.7207C16.7141 10.0424 19.2614 10.0605 20.3398 11.7189C20.4207 11.8434 20.3257 11.9997 20.1772 11.9997H15.8184Z" fill="#f7f3f3"></path> <path d="M16 6C15.4477 6 15 6.44772 15 7C15 7.55228 15.4477 8 16 8H20C20.5523 8 21 7.55228 21 7C21 6.44772 20.5523 6 20 6H16Z" fill="#f7f3f3"></path> </g></svg></div>
+    <div class="sd86"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="#efeef6"></path> </g></svg></div>
+</div>
+</div>
+  </body>
+</html>
